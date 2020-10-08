@@ -1,0 +1,144 @@
+body {
+    background-color: darkslategrey;
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-color: darkturquoise;
+    gap: 10px;
+}
+.header {
+    grid-column: 1 / 2;
+    grid-row: 60px;
+    background-color: lemonchiffon;
+    font-size: 35px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.menu {
+    display: grid;
+    grid-column: 2 / 5;
+    grid-row: 60px;
+    background-color: rgb(247, 0, 255);
+    text-align: left;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 5;
+}
+.menu a {
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: wheat;
+}
+
+.news {
+    grid-column: 2 / 3; 
+    text-align: left; 
+}
+
+.about {
+    grid-column: 3 / 4;
+    text-align: left;
+}
+
+.store {
+    grid-column: 4 / 5;
+    text-align: left;
+}
+
+.content {
+    grid-column: 1 / 5;
+    grid-row: span 5 / 7;
+    background-color: blueviolet;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    grid-column: 1 / 5;
+    grid-row: 8 / 9;
+    text-align: center;
+    background-color: cadetblue;
+}
+
+/*DESKTOP ABOVE, MOBILE SCREEN BELOW*/
+
+@media screen and (max-width: 500px) {
+    .container {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        background-color: darkturquoise;
+        gap: 10px;
+    }
+    .header {
+        grid-column: 1 / 4;
+        grid-row: 60px;
+        background-color: lemonchiffon;
+        font-size: 35px;
+        text-align: center;
+        line-height: 1.8;
+    }
+    .header a {
+        text-decoration: none;
+    }
+    .content {
+        grid-column: 1 / 4;
+        grid-row: span 4/ 5;
+        background-color: blueviolet;
+        text-align: center;
+    }
+    .menu {
+        display: grid;
+        grid-column: 1 / 4;
+        grid-row: 6 / 8;
+        background-color: rgb(247, 0, 255);
+        text-align: left;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 5;
+    }
+    
+.menu a {
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: wheat;
+}
+
+    .news {
+        grid-column: 1 / 2; 
+        text-align: center; 
+    }
+
+    .about {
+        grid-column: 2 / 3;
+        text-align: center;
+    }
+
+    .store {
+        grid-column: 3 / 4;
+        text-align: center;
+    }
+    .footer {
+        grid-column: 1 / 4;
+        grid-row: 8 / 9;
+        text-align: center;
+        background-color: cadetblue;
+    }
+
+}
